@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import db.DB;
+import entities.Product;
 
 public class Program {
 
@@ -18,7 +19,20 @@ public class Program {
 		ResultSet rs = st.executeQuery("select * from tb_product");
 			
 		while (rs.next()) {
-			System.out.println(rs.getLong("Id") + ", " + rs.getString("Name"));
+			Product product = instantiateProduct(rs);
+			
+			System.out.println(product);
 		}
 	}
+	
+	private static Product instantiateProduct(ResultSet rs) throws SQLException {
+		Product product = new Product();
+		product.setId(rs.getLong("id"));
+		product.setDescription(rs.getString("description"));
+		product.setName(rs.getString("name"));
+		product.setImageUri(rs.getString("image_uri"));
+		product.setPrice(rs.getDouble("price"));
+		return product;
+	}
+	
 }
