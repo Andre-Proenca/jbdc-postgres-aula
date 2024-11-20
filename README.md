@@ -70,7 +70,7 @@ INSERT INTO tb_order_product (order_id, product_id) VALUES
 (2 , 3);
 ```
 
-## Consulta para recuperar os pedidos com seus produtos
+## Query to retrieve orders with their products
 ```sql
 SELECT * FROM tb_order
 INNER JOIN tb_order_product ON tb_order.id = tb_order_product.order_id
