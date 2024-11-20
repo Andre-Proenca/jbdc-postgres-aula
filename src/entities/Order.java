@@ -58,7 +58,11 @@ public class Order {
 		return products;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Order [id=" + id + ", latitude=" + latitude + ", longitude=" + longitude + ", moment=" + moment
+				+ ", status=" + status + "]";
+	}	
 	
 	
 	
