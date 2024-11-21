@@ -76,7 +76,3 @@ SELECT * FROM tb_order
 INNER JOIN tb_order_product ON tb_order.id = tb_order_product.order_id
 INNER JOIN tb_product ON tb_product.id = tb_order_product.product_id
 ```
-## Class Diagram
-<p align="center">
-  <img width="470" height="300" src="C:\Users\Andre\OneDrive\Imagens\Capturas de tela\classdiagramjdbcpostgres.png">
-</p>
